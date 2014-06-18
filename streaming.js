@@ -13,7 +13,9 @@ var credentials = {
 };
 
 var oa = new OAuth(null, null, credentials.consumer_key, credentials.consumer_secret, "1.0", null, "HMAC-SHA1");
+
 console.log("auth...");
+
 var request = oa.get(
 	"https://stream.tradeking.com/v1/market/quotes?symbols=AAPL"
 	, credentials.access_token
